@@ -1,9 +1,9 @@
-package Class01;
+package Class01HomeWork;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Class01HomeWork {
+public class Task1 {
     public static void main(String[] args) {
 
         System.setProperty("webdriver.chrome.driver","Drivers/chromedriver.exe");
