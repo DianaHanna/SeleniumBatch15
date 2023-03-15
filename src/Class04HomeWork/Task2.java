@@ -14,14 +14,12 @@ public class Task2 {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("http://practice.syntaxtechs.net/basic-checkbox-demo.php");
-        List<WebElement> checkBoxes = driver.findElements(By.cssSelector("input[class='cb1-element']"));
-        for (WebElement checkBox : checkBoxes) {
-            String option = (checkBox.getAttribute("value"));
-
-            if (checkBox.isEnabled() && option.equalsIgnoreCase("Option 1")) ;
-            checkBox.click();
-
+        List<WebElement> checkBoxes = driver.findElements(By.xpath("//input[@class='cb1-element']"));
+        for (int i = 0; i < checkBoxes.size() ; i++) {
+            String value=checkBoxes.get(i).getAttribute("value");
+            if (value.equalsIgnoreCase("Option-2"));
+            checkBoxes.get(i).click();
         }
-    }
+        }
     }
 
